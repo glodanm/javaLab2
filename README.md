@@ -1,6 +1,6 @@
 # javaLab2
 
-#Task
+# Task
 
 Write code for UML diagram from lab 2.
 
