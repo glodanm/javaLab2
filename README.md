@@ -1,12 +1,13 @@
-# javaLab2
+# Lab9
 
-#Task
+## Task
 
-Write code for UML diagram from lab 2.
+Create a REST service for one of the classes created in the previous laboratory work.
 
-Amusement Park. Implement a hierarchy of entertainment that children and adults can visit at Disneyland. Search for entertainment that can be visited by parents with a child of the specified age (for example - 7 years) and display the result sorted by ticket price
-Implement the possibility of sorting entertainment by the maximum number of children on the attraction at the same time
-The implementation of sorting should provide the ability to sort both in descending and ascending order
+# Requirements
 
-Class diagram: https://drive.google.com/file/d/136R0O7d5lMOLIcnagxDyZKxgn89mTed8/view?usp=sharing
-
+* Service should have implemented CRUD operations.
+* GET request without id in url-request should return the list of all available objects.
+* The controller and RestApplication class code must be placed in separate packages.
+* Saving class objects should be done in a Map object.
+* The code should be checked using Findbugs / checkstyle / pmd plugins.
