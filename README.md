@@ -1,6 +1,5 @@
 # Lab9
 
-## Task
 
 Create a REST service for one of the classes created in the previous laboratory work.
 
