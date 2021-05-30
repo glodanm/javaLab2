@@ -1,12 +1,11 @@
-# javaLab2
+# Tenth lab
 
 #Task
 
-Write code for UML diagram from lab 2.
+My tenth Lab My fourth lab in Java If you want to launch the program, follow instruction: Clone/Download lab10 branch
 
-Amusement Park. Implement a hierarchy of entertainment that children and adults can visit at Disneyland. Search for entertainment that can be visited by parents with a child of the specified age (for example - 7 years) and display the result sorted by ticket price
-Implement the possibility of sorting entertainment by the maximum number of children on the attraction at the same time
-The implementation of sorting should provide the ability to sort both in descending and ascending order
+Go into repo folder Run javac app.java to compile the source Run java App to start the app
 
-Class diagram: https://drive.google.com/file/d/136R0O7d5lMOLIcnagxDyZKxgn89mTed8/view?usp=sharing
+TASK FOR 10 LAB: Implement saving of one of the classes from 8-th lab in a table in a database using spring.boot and spring.data
 
+9-th lab code should be changed in such way, that permits saving/reading data to/from database Code should comply with code convention Code should be checked with findbugs, pmd and checkstyle plugins A separate pull request should be created Code must contain separate *Controller, *Service and *Repository classes Configuration of database accessing should be done through properties file
