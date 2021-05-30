@@ -10,28 +10,38 @@ import ua.lviv.iot.entertainments.enums.Age;
 @Data
 @EqualsAndHashCode(callSuper = true)
 
-public class RiverExcurcion extends Entertainment{
+public class RiverExcurcion extends Entertainment {
     public Float routeLength;
     public Float lengthOfBoat;
 
-    public RiverExcurcion(String name, Age age, Integer price, Integer height, Integer maxPeople, Integer maxNumOfKids,
-                          Float routeLength, Float lengthOfBoat){
-        super(name, age, price, height, maxPeople, maxNumOfKids);
+    public RiverExcurcion(Integer id, String name, Age age, Integer price, Integer height,
+                          Integer maxPeople, Integer maxNumOfKids,
+                          Float routeLength, Float lengthOfBoat) {
+        super(id, name, age, price, height, maxPeople, maxNumOfKids);
         this.routeLength = routeLength;
         this.lengthOfBoat = lengthOfBoat;
     }
 
     @Override
     public String toString() {
-        return "RiverExcurcion{" +
-                "name='" + name + '\'' +
-                ", age=" + age +
-                ", price=" + price +
-                ", height=" + height +
-                ", maxPeople=" + maxPeople +
-                ", maxNumOfKids=" + maxNumOfKids +
-                ", routeLength=" + routeLength +
-                ", lengthOfBoat=" + lengthOfBoat +
+        return "RiverExcurcion{"
+                +
+                "name='" + name + '\''
+                +
+                ", age=" + age
+                +
+                ", price=" + price
+                +
+                ", height=" + height
+                +
+                ", maxPeople=" + maxPeople
+                +
+                ", maxNumOfKids=" + maxNumOfKids
+                +
+                ", routeLength=" + routeLength
+                +
+                ", lengthOfBoat=" + lengthOfBoat
+                +
                 '}';
     }
 }

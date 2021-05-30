@@ -16,31 +16,46 @@ import java.util.stream.Collectors;
 public class EntertainmentManager {
     private List<Entertainment> amusement;
 
-    public List<Entertainment> findByAge(final Age age){
-        return amusement.stream().filter(item -> item.getAge() == age).collect(Collectors.toList());
+    public List<Entertainment> findByAge(final Age age) {
+        return amusement.stream().filter(item ->
+                item.getAge() == age).collect(Collectors.toList());
     }
 
-    public List<Entertainment> sortByPrice(final SortOrder sortOrder){
+    public List<Entertainment> func() {
+        return amusement.stream().filter(item -> item.getAge() == Age.ADULT).filter(
+                item -> item.getPrice() >= 5).collect(Collectors.toList());
+    }
+
+
+
+    public List<Entertainment> sortByPrice(final SortOrder sortOrder) {
         List<Entertainment> sortedAmusement = new ArrayList<>(amusement);
-        if (sortOrder == sortOrder.ASC){
-            sortedAmusement.sort((amusement1, amusement2) -> amusement1.getPrice().compareTo(amusement2.getPrice()));
-        }else{
-            sortedAmusement.sort((amusement1, amusement2) -> amusement2.getPrice().compareTo(amusement1.getPrice()));
+        if (sortOrder == SortOrder.ASC) {
+            sortedAmusement.sort((amusement1, amusement2) ->
+                    amusement1.getPrice().compareTo(amusement2.getPrice()));
+        } else {
+            sortedAmusement.sort((amusement1, amusement2) ->
+                    amusement2.getPrice().compareTo(amusement1.getPrice()));
         }
         return sortedAmusement;
     }
 
-    public List<Entertainment> sortByMaxNumOfKids(final SortOrder sortOrder){
+    public List<Entertainment> sortByMaxNumOfKids(final SortOrder sortOrder) {
         List<Entertainment> sortedAmusement = new ArrayList<>(amusement);
-        if (sortOrder == SortOrder.ASC){
-            sortedAmusement.sort((amusement1, amusement2) -> amusement1.getMaxNumOfKids().compareTo(amusement2.getMaxNumOfKids()));
-        }else {
-            sortedAmusement.sort((amusement1, amusement2) -> amusement2.getMaxNumOfKids().compareTo(amusement1.getMaxNumOfKids()));
+        if (sortOrder == SortOrder.ASC) {
+            sortedAmusement.sort((amusement1, amusement2) ->
+                    amusement1.getMaxNumOfKids().compareTo(
+                            amusement2.getMaxNumOfKids()));
+        } else {
+            sortedAmusement.sort((amusement1, amusement2) ->
+                    amusement2.getMaxNumOfKids().compareTo(
+                            amusement1.getMaxNumOfKids()));
         }
         return sortedAmusement;
     }
 
-    public static void printEntertainments(final  List<Entertainment> amusement){
+    public static void printEntertainments(
+            final List<Entertainment> amusement) {
         amusement.forEach(System.out::println);
     }
 }
